@@ -33,15 +33,6 @@ public final class App {
         final String timeStamp = String.valueOf(ut2);
         System.out.println(timeStamp);
 
-        
-        HttpRequest request1 = HttpRequest.newBuilder()
-        .uri(URI.create("https://api.coinbase.com/v2/time"))
-        .method("GET", HttpRequest.BodyPublishers.noBody())
-        .build();
-        HttpResponse<String> response2 = HttpClient.newHttpClient().send(request1, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response2.body());
-
-
         //creating preHash string
         //String preHash = timeStamp + "POST" + "/orders" + message;
         String secretKey = "";
